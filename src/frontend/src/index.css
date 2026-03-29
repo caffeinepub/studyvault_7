@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Main background: cool off-white */
+    --background: 0.97 0.006 245;
+    --foreground: 0.18 0.04 250;
+
+    /* Cards: pure white */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 250;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 250;
+
+    /* Primary: vibrant blue */
+    --primary: 0.52 0.22 255;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.93 0.015 245;
+    --secondary-foreground: 0.25 0.04 250;
+
+    --muted: 0.93 0.01 245;
+    --muted-foreground: 0.52 0.025 245;
+
+    --accent: 0.93 0.015 245;
+    --accent-foreground: 0.25 0.04 250;
+
+    --destructive: 0.58 0.24 27;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.89 0.02 245;
+    --input: 0.89 0.02 245;
+    --ring: 0.52 0.22 255;
+
+    --chart-1: 0.7 0.18 55;
+    --chart-2: 0.62 0.18 145;
+    --chart-3: 0.58 0.22 280;
+    --chart-4: 0.62 0.22 22;
+    --chart-5: 0.65 0.16 185;
+
+    /* Dark navy sidebar */
+    --sidebar: 0.18 0.055 248;
+    --sidebar-foreground: 0.88 0.03 245;
+    --sidebar-primary: 0.55 0.22 255;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.25 0.06 248;
+    --sidebar-accent-foreground: 0.88 0.03 245;
+    --sidebar-border: 0.28 0.05 248;
+    --sidebar-ring: 0.52 0.22 255;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-display;
+  }
+}
